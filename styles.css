@@ -1,0 +1,416 @@
+html {
+font-size: calc(0.6em + 1vw);
+font-family: Helvetica, Arial, sans-serif;
+line-height: 120%;
+color: #333;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+  letter-spacing: -0.045em;
+  width: 90%;
+  line-height: 120%;
+}
+
+
+p {
+  font-size: 0.9em;
+}
+
+a {
+  color: #3eadcf;
+}
+
+hr {
+  color: #eee;
+  border-width: 0.1em;
+  border-style: dashed;
+  margin-bottom: 0.5em;
+}
+
+label, textarea, input, select {
+  width: 95%;
+  border: 0;
+  margin-top: 0;
+  display: block;
+  vertical-align:middle;
+  white-space:normal;
+  background:none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.75em;
+  padding: 0.5em;
+}
+
+legend {
+  font-size: 0.90em;
+}
+
+fieldset {
+  border: 0;
+  width: 90%;
+  margin-top: 0.5em;
+  display: block;
+  white-space:normal;
+  background:none;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  padding: 0.5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+}
+
+::-webkit-input-placeholder {
+  font-size: 1em;
+}
+
+:-ms-input-placeholder {
+  font-size: 1em;
+}
+
+::-ms-input-placeholder {
+  font-size: 1em;
+}
+
+::placeholder {
+  font-size: 1em;
+}
+
+#dropdown {
+  margin-top: 0.2em;
+}
+
+button {
+  border-radius: 0.5em;
+  margin-top: 0;
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 0.5em;
+  color: #333;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: white;
+}
+
+.header, .intro, .form, .personal, .product, .opinion-longevity, .submission {
+  font-size: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.small {
+  font-size: 0.6em;
+}
+
+.page-grid {
+  display: -ms-grid;
+  display: grid;
+  margin: 1em;
+  grid-auto-columns: minmax(auto, auto);
+  grid-gap: 1em 1em;
+  -ms-grid-rows: auto 1em auto;
+  grid-template-rows: auto auto;
+          grid-template-areas:
+    "header intro intro"
+    "form form form"
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  justify-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, right top, from(#3eadcf), to(#abe9cd));
+  background: -webkit-linear-gradient(left, #3eadcf, #abe9cd);
+  background: -o-linear-gradient(left, #3eadcf, #abe9cd);
+  background: linear-gradient(90deg, #3eadcf, #abe9cd);
+  border-radius: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.intro {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-area: intro;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.form {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: form;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1.5fr;
+  grid-gap: 1em 0.5em;
+  -ms-grid-rows: auto 1em auto;
+  grid-template-rows: auto auto;
+          grid-template-areas:
+    "personal product opinion-longevity"
+    "submission submission submission"
+}
+
+.personal {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: personal;
+  border: 0.1em solid #eee;
+  border-radius: 0.5em;
+}
+
+.product {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: product;
+  border: 0.1em solid #eee;
+  border-radius: 0.5em;
+}
+
+.opinion-longevity {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: opinion-longevity;
+  border: 0.1em solid #eee;
+  border-radius: 0.5em;
+}
+
+.submission {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: submission;
+}
+
+.checkbox-container {
+  font-size: 0.85em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkmark {
+  background: -webkit-linear-gradient(45deg, #3eadcf, #abe9cd);
+  background: -o-linear-gradient(45deg, #3eadcf, #abe9cd);
+  background: linear-gradient(45deg, #3eadcf, #abe9cd);
+}
+
+
+/* CUSTOM RADIO BUTTONS*/
+
+/* Customize the label (the container) */
+.radio-container {
+  font-size: 0.85em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.radio-checkmark {
+  margin-right: 0.2em;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .radio-checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-container input:checked ~ .radio-checkmark {
+  background: -webkit-linear-gradient(45deg, #3eadcf, #abe9cd);
+  background: -o-linear-gradient(45deg, #3eadcf, #abe9cd);
+  background: linear-gradient(45deg, #3eadcf, #abe9cd);
+}
+
+@media only screen and (max-width: 991px) {
+
+  html {
+    font-size: calc(0.6em + 1.5vw);
+  }
+
+  .small {
+    font-size: 0.75em;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 1.2em;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+
+  ::-ms-input-placeholder {
+    font-size: 1.2em;
+  }
+
+  ::placeholder {
+    font-size: 1.2em;
+  }
+
+  .form {
+    grid-template-columns: repeat(auto-fit, minmax(auto, auto));
+    grid-gap: 1em 0.5em;
+    -ms-grid-rows: auto 1em auto 1em auto;
+    grid-template-rows: auto auto auto;
+            grid-template-areas:
+      "personal product"
+      "opinion-longevity opinion-longevity"
+      "submission submission"
+  }
+  .personal {
+-ms-grid-row: 1;
+-ms-grid-column: 1
+  }
+  .product {
+-ms-grid-row: 1;
+-ms-grid-column: 3
+  }
+  .opinion-longevity {
+-ms-grid-row: 3;
+-ms-grid-column: 1;
+-ms-grid-column-span: 3
+  }
+  .submission {
+-ms-grid-row: 5;
+-ms-grid-column: 1;
+-ms-grid-column-span: 3
+  }
+}
+
+@media only screen and (max-width: 767px) {
+
+  html {
+    font-size: calc(0.6em + 2.5vw);
+  }
+
+
+  .page-grid {
+    grid-auto-columns: minmax(auto, auto);
+    grid-gap: 1em 1em;
+    -ms-grid-rows: auto 1em auto;
+    grid-template-rows: auto auto;
+            grid-template-areas:
+      "header"
+      "intro"
+      "form"
+    }
+  .form {
+    grid-template-columns: repeat(auto-fit, minmax(auto, auto));
+    grid-gap: 1em 0.5em;
+    -ms-grid-rows: auto 1em auto 1em auto 1em auto;
+    grid-template-rows: auto auto auto auto;
+            grid-template-areas:
+      "personal"
+      "product"
+      "opinion-longevity"
+      "submission"
+  }
+  .header {
+-ms-grid-row: 1;
+-ms-grid-column: 1
+    }
+  .intro {
+-ms-grid-row: 3;
+-ms-grid-column: 1;
+-ms-grid-column-span: 1
+    }
+  .form {
+-ms-grid-row: 5;
+-ms-grid-column: 1;
+-ms-grid-column-span: 1
+    }
+  .personal {
+-ms-grid-row: 1;
+-ms-grid-column: 1
+  }
+  .product {
+-ms-grid-row: 3;
+-ms-grid-column: 1
+  }
+  .opinion-longevity {
+-ms-grid-row: 5;
+-ms-grid-column: 1;
+-ms-grid-column-span: 1
+  }
+  .submission {
+-ms-grid-row: 7;
+-ms-grid-column: 1;
+-ms-grid-column-span: 1
+  }
+}

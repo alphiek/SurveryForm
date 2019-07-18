@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta charset="utf-8">
+  <meta name="viewport", content="width=device-width", initial-scale="1.0">
+
+  <title>Sample Customer Satisfaction Survey</title>
+
+  <meta name="description" content="Sample Customer Satisfaction Survery">
+  <meta name="author" content="RKK Creative">
+
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+  <div class="page-grid">
+<!--Heading Wrapper-->
+    <div class="header">
+      <h1 id="title">Customer Satisfaction Survey</h1>
+    </div>
+<!--Intro Wrapper-->
+    <div class="intro">
+      <p id="description">Thanks for taking the time to complete our survey. </p>
+      <p class="small"> We want to improve our customer statisfaction and offer a better product service. That's why we need your opinion about your product experience.
+        In addition to your opinion, we will also collect some personal information about you and provide an option for you to agree to a follow up conversation regarding your views.</p>
+      <p class="small"> We securely store this data until the end of this year, when the research period is complete. We respect your trust and protect your privacy,
+        therefore will never sell or share this data with any third parties. By filling out this form you agree that that we will process your data inline with our <a href="#"> privacy policy.</a>
+        If you have any questions or change your mind, contact our <a href="#">Data Protection Officer</a>.</p>
+    </div>
+
+<!-- Start of Form-->
+
+    <form class="form" id="survey-form" autocomplete="on" action="">
+<!--Personal Wrapper-->
+      <div class="personal">
+        <label for="name" id="name-label">Name:
+          <input type="text" id="name" name="name" placeholder="Please enter your name" required>
+        </label>
+        <label for="email" id="email-label">Email:
+          <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+        </label>
+        <label for="age" id="number-label">Age:
+          <input type="number" id="number" name="number" min="18" max="99" value="Age" placeholder="Please enter your age">
+        </label>
+        <label for="gender">Please specify your gender:
+          <select name="gender" id="dropdown">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Non Binary">Non Binary</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+          </select>
+        </label>
+        <label for="employment">What is your employment status:
+          <select name="employment" id="dropdown">
+            <option value="Student">Student</option>
+            <option value="Seeking employment">Seeking employment</option>
+            <option value="Employed">Employed</option>
+            <option value="Retired">Retired</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+       </label>
+       <label for="product usage">How often do you use 'product':
+         <select name="product usage" id="dropdown">
+           <option value="Daily">Daily</option>
+           <option value="Weekly">Weekly</option>
+           <option value="Monthly">Monthly</option>
+           <option value="Yearly">Yearly</option>
+           <option value="Never">Never</option>
+         </select>
+       </label>
+      </div>
+
+<!--Product Wrapper-->
+      <div class="product">
+
+    <!-- custom radioboxes-->
+        <fieldset>
+          <legend>How Satisfied are you with the product:</legend>
+            <label for="unsatisfied" class="radio-container">Unsatisfied
+              <input id="unsatisfied" name="satisfaction-rating" type="radio" value="unsatisfied">
+              <span class="radio-checkmark"></span>
+            </label>
+            <label for="average" class="radio-container">Average
+              <input id="average" name="satisfaction-rating" type="radio" value="average">
+              <span class="radio-checkmark"></span>
+           </label>
+           <label for="satisfied" class="radio-container">Satisfied
+             <input id="satisfied" name="satisfaction-rating" type="radio" value="satisfied">
+             <span class="radio-checkmark"></span>
+           </label>
+        </fieldset>
+    <!-- Custom radioboxes -->
+        <fieldset>
+          <legend>How Likely are you to recommend 'Product':</legend>
+            <label for="not-likely" class="radio-container">Not Likely
+              <input id="not-likely" name="recommendation" type="radio" value="not-likely">
+              <span class="radio-checkmark"></span>
+            </label>
+            <label for="maybe" class="radio-container">Maybe
+              <input id="maybe" name="recommendation" type="radio" value="maybe">
+              <span class="radio-checkmark"></span>
+           </label>
+           <label for="likely" class="radio-container">Highly Likely
+             <input id="likely" name="recommendation" type="radio" value="likely">
+             <span class="radio-checkmark"></span>
+           </label>
+       </fieldset>
+      </div>
+
+<!--feedback Wrapper -->
+      <div class="opinion-longevity">
+        <div>
+        <label for="feedback">What's working for you?
+          <textarea id="feedback" name="feedback" rows="8" cols="40" placeholder="Let us know your thoughts"></textarea>
+        </label>
+        </div>
+        <div>
+        <label for="improvements">How can we improve?
+          <textarea id="improvements" name="improvements" rows="8" cols="40" placeholder="Your experience is important to us"></textarea>
+        </label>
+        </div>
+      <hr>
+       <fieldset>
+         <legend>Contact Preferences (Please tick all that apply):</legend>
+           <label for="follow-up" class="checkbox-container">May we contact you to follow up on these responses
+             <input id="follow-up" name="future-contact-options[]" type="checkbox" value="follow-up">
+             <span class="checkmark"></span>
+          </label>
+          <label for="retake-survey" class="checkbox-container">In the future, would you be willing to take this survey again?
+            <input id="retake-survey" name="future-contact-options[]" type="checkbox" value="retake-survey">
+            <span class="checkmark"></span>
+          </label>
+          <label for="new-feature-contact" class="checkbox-container">If we were to update 'Product', <br/> could we reach back out to talk about these changes?
+            <input id="new-feature-contact" name="future-contact-options[]" type="checkbox" value="new-feature-contact">
+            <span class="checkmark"></span>
+          </label>
+        </fieldset>
+        </div>
+  <!--Submit Wrapper -->
+        <button class="submission" type="submit" id="submit">Submit Form</button>
+      </form>
+    </div>
+  </body>
+</html>
